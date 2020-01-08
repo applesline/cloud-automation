@@ -439,7 +439,7 @@ gen3_gitops_rsync() {
     echo -e "$(red_color "ERROR: gen3 gitops rsync user@host")"
     return 1
   fi
-  if ! ssh "$target" "bash -c 'cd cloud-automation && git checkout master && git pull && cd ../cdis-manifest && git checkout master && git pull'"; then
+  if ! ssh "$target" "bash -c 'cd cloud-automation && cd ../cdis-manifest'"; then
     echo -e "$(red_color "ERROR: could not update cloud-automation or cdis-manifest at $target")"
     return 1
   fi

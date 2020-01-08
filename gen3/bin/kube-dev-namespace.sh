@@ -69,7 +69,7 @@ if [[ -z  "${gitopsPath}" ]]; then
 fi
 if [[ ! -d ./cdis-manifest ]]; then
   git clone "$gitopsPath" cdis-manifest
-  (cd cdis-manifest && git checkout master)
+  (cd cdis-manifest)
 fi
 
 # setup ~/vpc_name
