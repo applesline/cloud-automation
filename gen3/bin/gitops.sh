@@ -481,8 +481,8 @@ gen3_gitops_enforcer() {
         mkdir -p "backups/$today"
         mv $(/bin/ls . | grep -v backups) "backups/$today/"
       fi
-      git checkout .
-      git checkout -f master
+      
+      
       git pull --prune
       git reset --hard origin/master
     )
